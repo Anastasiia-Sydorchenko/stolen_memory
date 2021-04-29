@@ -34,5 +34,8 @@
 		"gulp-stylus": "^2.7.0",
 		"node-normalize-scss": "^8.1.2",
 		"webpack-stream": "^6.1.2"
+	},
+	"dependencies": {
+		"swiper": "^6.5.8"
 	}
 }

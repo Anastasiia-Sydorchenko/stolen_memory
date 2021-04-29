@@ -1,2 +1,152 @@
 @import config
 @import 'blocks/**/*'
+
+.comics_first
+   background-image: url('../images/dist/top_block__bg.jpg')
+   height: 100vh
+   background-size: cover
+   background-position: 50% 50%
+
+   .comics_first__text
+      height: 100vh
+      width: 50%
+      display: flex
+      align-items: center
+      margin-right: auto
+      margin-left: auto
+
+.comics_second
+   background-image: url('../images/dist/second_block__bg.jpg')
+   height: 100vh
+   background-size: cover
+   background-position: 50% 50%
+   position: relative
+
+   .comics_second__text
+      width: 28%
+      height: 20%
+      padding: 50px
+      background-color: #ffffff
+      position: absolute
+      right: 10%
+      top: 10%
+
+.comics_third
+   background-image: url('../images/dist/third_block__bg.jpg')
+   height: 100vh
+   background-size: cover
+   background-position: 50% 50%
+   position: relative
+
+   .comics_third__text
+      width: 28%
+      height: 20%
+      padding: 50px
+      background-color: #ffffff
+      position: absolute
+      left: 10%
+
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+
+.comics_fourth
+   background-image: url('../images/dist/fourth_block__bg.jpg')
+   height: 100vh
+   background-size: cover
+   background-position: 50% 50%
+   position: relative
+
+   .comics_fourth__text
+      width: 28%
+      height: 20%
+      padding: 50px
+      background-color: #ffffff
+      position: absolute
+      right: 10%
+      top: 10%
+
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+
+.people_gallery
+   padding: 150px 0 100px 0
+
+   .people_gallery__slider 
+      overflow: visible
+      padding-bottom: 50px
+
+   .people_gallery__slider .swiper-wrapper
+      .swiper-slide
+         background-image: url('../images/dist/people_gallery__bg.jpg')
+         background-repeat: no-repeat
+         background-position: bottom
+         padding-bottom: 30px
+         height: auto
+
+         .img-wrapper
+            display: flex
+            justify-content: center
+
+            img
+               width: 85%
+               height: auto
+
+         .name,
+         .description
+            font-size: calc(13px + 7 * ((100vw - 320px) / (1440 - 320)))
+            color: #ffffff
+            text-align: center
+            line-height: 1.5
+            padding: 0 10px
+         
+         .name
+            padding: 20px 0
+   
+   .swiper-pagination-bullet
+      width: 10px
+      height: 10px
+
+   .swiper-pagination-bullet-active
+      background-color: #6fb6a6
+
+
+
+
+//MEDIA QUERIES  
+//@media (min-width: 1800px)
+
+@media (max-width: 1399.98px)
+   .comics_first
+      background-size: auto 100%
+      background-position: 50% 50%
+      background-repeat: no-repeat
+
+   .comics_second .comics_second__text,
+   .comics_third .comics_third__text,
+   .comics_fourth .comics_fourth__text
+      width: 25%
+      height: 15%
+      padding: 35px
+
+@media (max-width: 1199.98px)
+   .comics_first .comics_first__text
+      width: 65%
+
+//@media (max-width: 991.98px)
+
+@media (max-width: 767.98px)
+   .comics_first
+      .comics_first__text
+         width: 80%
+
+      .comics_top-text
+         font-size: 25px
+         line-height: 1.8
+
+//@media (max-width: 575.98px)
+
+//@media (max-width: 479.98px)
+
+//@media (max-width: 374.98px)
