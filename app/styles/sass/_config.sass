@@ -13,7 +13,8 @@ body
    margin-left: auto
    margin-right: auto
 
-p
+p,
+h3
    padding: 0
    margin: 0
 
@@ -27,6 +28,7 @@ p
       background-color: rgb(131, 202, 186)
       transition: .5s linear
       color: #ffffff
+      width: fit-content
 
 .get-more_btn
    color: #221D26
@@ -62,12 +64,34 @@ p
       color: #ffffff
       transition: none
 
-h2
+h2,
+h3
    font-size: calc(20px + 10 * ((100vw - 320px) / (1440 - 320)))
+
+h3 
+   padding: 30px 0
+
+.h3_subheading-text
+   font-size: calc(15px + 3 * ((100vw - 320px) / (1440 - 320)))
+   padding-bottom: 30px
+   line-height: 1.5
 
 .subheading_text
    font-size: calc(15px + 5 * ((100vw - 320px) / (1440 - 320)))
    line-height: 1.8
    padding: 35px 0 50px 0
 
-// GENERAL DOCUMENT STYLES
+.main-btn
+   font-size: calc(15px + 9 * ((100vw - 320px) / (1440 - 320)))
+   border: 1px solid black
+   padding: 20px
+   text-decoration: none
+   color: black
+
+   &:hover,
+   &:focus
+      background-color: #6fb6a6
+      border-color: #6fb6a6
+      color: white
+      transition: .3s
+      

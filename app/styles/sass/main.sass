@@ -111,6 +111,107 @@
    .swiper-pagination-bullet-active
       background-color: #6fb6a6
 
+.about_objects
+   padding-bottom: 100px
+   .img-wrapper
+      position: relative
+
+      img
+         width: 100%
+         height: auto
+
+      .effects_info
+         position: absolute
+         width: 35%
+         height: auto
+         background-color: white
+         bottom: 35px
+         left: 35px
+         padding: 40px
+
+         h3 
+            margin-top: 0
+            width: fit-content
+
+            &:hover,
+            &:focus
+               background-color: rgb(131, 202, 186)
+               transition: .5s linear
+               color: #ffffff
+
+         .subheading_text
+            padding: 0 0 30px 0
+
+.objects-gallery
+   .objects-gallery_grid
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-template-rows: 1fr 1fr 1fr
+      gap: 0px 15px
+      padding-bottom: 50px
+
+      .grid-item
+         background-image: url('../images/dist/people_gallery__bg.jpg')
+         background-repeat: no-repeat
+         background-position: bottom
+         padding-bottom: 30px
+         height: auto
+
+         .img-wrapper
+            display: flex
+            justify-content: center
+
+            img
+               width: 100%
+               height: auto
+
+         .name,
+         .description
+            font-size: calc(13px + 7 * ((100vw - 320px) / (1440 - 320)))
+            color: #ffffff
+            text-align: center
+            line-height: 1.5
+            padding: 0 10px
+         
+         .name
+            padding: 20px 0
+
+   .object-gallery_bottom
+      text-align: center
+      font-size: calc(15px + 5 * ((100vw - 320px) / (1440 - 320)))
+
+      a 
+         display: inline-block
+
+      p 
+         padding: 50px 0
+
+.about-us
+   background-image: url('../images/dist/about-us__bg.jpg')
+   height: 100vh
+
+   .about-us_content
+      background-color: white
+      position: relative
+
+      .info
+         display: flex
+         flex-direction: column
+         width: 35%
+         margin-left: auto
+         padding: 40px 100px 150px 40px
+
+         .main-btn
+            width: fit-content
+
+      .archives
+         position: absolute
+         top: 35px
+         left: -40px
+
+         img
+            width: 100%
+            height: auto
 
 
 
