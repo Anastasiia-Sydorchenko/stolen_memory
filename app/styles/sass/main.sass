@@ -73,8 +73,7 @@
 .people_gallery
    padding: 150px 0 100px 0
 
-   .people_gallery__slider 
-      overflow: visible
+   .people_gallery__slider
       padding-bottom: 50px
 
    .people_gallery__slider .swiper-wrapper
@@ -100,10 +99,10 @@
             text-align: center
             line-height: 1.5
             padding: 0 10px
-         
+
          .name
             padding: 20px 0
-   
+
    .swiper-pagination-bullet
       width: 10px
       height: 10px
@@ -129,7 +128,7 @@
          left: 35px
          padding: 40px
 
-         h3 
+         h3
             margin-top: 0
             width: fit-content
 
@@ -172,7 +171,7 @@
             text-align: center
             line-height: 1.5
             padding: 0 10px
-         
+
          .name
             padding: 20px 0
 
@@ -180,17 +179,22 @@
       text-align: center
       font-size: calc(15px + 5 * ((100vw - 320px) / (1440 - 320)))
 
-      a 
+      a
          display: inline-block
 
-      p 
+      p
          padding: 50px 0
 
 .about-us
    background-image: url('../images/dist/about-us__bg.jpg')
-   height: 100vh
+   background-repeat: repeat
+   padding: 100px 0
 
-   .about-us_content
+   h2,
+   .subheading_text
+      color: white
+
+   .about-us_content,
       background-color: white
       position: relative
 
@@ -201,10 +205,7 @@
          margin-left: auto
          padding: 40px 100px 150px 40px
 
-         .main-btn
-            width: fit-content
-
-      .archives
+      .about-us_content_img
          position: absolute
          top: 35px
          left: -40px
@@ -213,7 +214,154 @@
             width: 100%
             height: auto
 
+   .online-archive_content
+      background-color: white
+      margin-top: 100px
+      margin-bottom: 100px
+      position: relative
 
+      .info
+         display: flex
+         flex-direction: column
+         width: 35%
+         padding: 40px 40px 150px 100px
+
+      .online-archive_img
+         position: absolute
+         top: 35px
+         right: -40px
+
+   .how-to-help_content
+      background-color: white
+      position: relative
+
+      .info
+         display: flex
+         flex-direction: column
+         width: 35%
+         margin-left: auto
+         padding: 40px 100px 150px 40px
+
+      .how-to-help_img
+         position: absolute
+         top: 35px
+         left: -40px
+
+.our-exhibitions
+   h2
+      padding: 50px 0
+
+   .our-exhibitions_bg
+      background-image: url(../images/dist/about-us__bg.jpg)
+      background-repeat: repeat
+
+.our-exhibitions_inner
+   padding: 100px 0 130px 0
+
+   h3
+      color: white
+
+   .news
+      display: flex
+      justify-content: space-between
+
+      .news-item
+         background-color: white
+         width: 32%
+         height: 500px
+         position: relative
+
+         .img_wrapper
+            img
+               width: 100%
+               height: auto
+
+         .news-item_content
+            padding: 30px
+
+            .label
+               font-size: 14px
+               text-transform: uppercase
+
+            h4
+               font-size: calc(16px + 6 * ((100vw - 320px) / (1440 - 320)))
+               line-height: 1.5
+               margin: 20px 0
+
+               a
+                  text-decoration: none
+                  color: black
+
+                  &:hover,
+                  &:focus
+                     color: #83caba
+                     transition: .3s
+
+            .date
+               font-size: 16px
+               position: absolute
+               bottom: 30px
+
+footer
+   padding: 100px 0 50px 0
+   color: #000fa0
+   font-size: 14px
+   display: flex
+   justify-content: space-between
+
+   span
+      display: block
+      margin-bottom: 20px
+      line-height: 1.5
+
+   .block_1
+      width: 30%
+
+   .block_2
+      width: 30%
+
+      form
+         margin-bottom: 20px
+
+         input
+            height: 25px
+            width: 70%
+            outline: none
+            padding: 0 5px
+
+         button
+            height: 29px
+            width: 20%
+            margin: 0
+            background-color: #000fa0
+            color: white
+            border: 1px solid #000fa0
+
+            &:hover
+               background-color: white
+               color: #000fa0
+               transition: .3s
+
+      .socials
+         display: flex
+         width: 60%
+         justify-content: space-between
+
+         .icon
+            font-size: 20px
+            color: black
+
+            &:hover
+               color: #000fa0
+               transition: .3s
+
+   .block_3
+      width: 30%
+
+      .logo
+         img
+            width: 100%
+            height: auto
 
 //MEDIA QUERIES  
 //@media (min-width: 1800px)
@@ -235,7 +383,11 @@
    .comics_first .comics_first__text
       width: 65%
 
-//@media (max-width: 991.98px)
+@media (max-width: 991.98px)
+   .our-exhibitions_inner
+      .news
+         .news-item
+            height: 420px
 
 @media (max-width: 767.98px)
    .comics_first
@@ -246,7 +398,40 @@
          font-size: 25px
          line-height: 1.8
 
-//@media (max-width: 575.98px)
+   .our-exhibitions_inner
+      .news
+         flex-direction: column
+
+         .news-item
+            width: 100%
+            height: auto
+            display: flex
+            margin-bottom: 30px
+
+            .img_wrapper
+               img
+                  height: 100%
+
+            .news-item_content
+               width: 50%
+               padding: 20px
+
+               h4
+                  margin: 15px 0
+
+               .date
+                  bottom: 10px
+
+@media (max-width: 575.98px)
+   .our-exhibitions_inner
+      .news
+         .news-item
+            .img_wrapper
+               display: none
+
+            .news-item_content
+               width: 100%
+               height: 120px
 
 //@media (max-width: 479.98px)
 
