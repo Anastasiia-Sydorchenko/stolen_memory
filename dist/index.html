@@ -14,39 +14,63 @@
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/main.min.css">
    <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=New+Tegomin&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 
 </head>
 
 <body>
+<div class="comics">
 
-<div class="comics_first">
-   <div class="comics_first__text">
-      <p class="comics_top-text">Jewelry, photos, papers – the Nazis confiscated all the victims’ personal belongings
-         on their arrest. Several thousand of these items from the concentration camps still exist today. We search for
-         the victims’ families and return these things to them.</p>
+   <div class="comics_first">
+      <div class="comics_first__text">
+         <p class="comics_top-text">Jewelry, photos, papers – the Nazis confiscated all the victims’ personal belongings
+            on their arrest. Several thousand of these items from the concentration camps still exist today. We search for
+            the victims’ families and return these things to them.</p>
+      </div>
+
+      <a href="#comics_second__anchor" class="to-down"><i class="fas fa-chevron-down"></i></a>
+   </div>
+   
+   <div class="comics_second" id="comics_second__anchor">
+      <div class="comics_second__text">
+         <p class="comics_main-text">He didn’t want to help the Nazis.</p>
+      </div>
+
+      <div class="comics_img__wrapper">
+         <img src="./images/dist/comics-second.jpg" alt="">
+      </div>
+
+      <a href="#comics_third__anchor" class="to-down"><i class="fas fa-chevron-down"></i></a>
+   </div>
+   
+   <div class="comics_third" id="comics_third__anchor">
+      <div class="comics_third__text">
+         <p class="comics_main-text">Lost youth: She was arrested at 16.</p>
+         <a href="#" class="get-more_btn">More about Helena</a>
+      </div>
+
+      <div class="comics_img__wrapper">
+         <img src="./images/dist/comics-third.jpg" alt="">
+      </div>
+
+      <a href="#comics_fourth__anchor" class="to-down"><i class="fas fa-chevron-down"></i></a>
+
+   </div>
+   
+   <div class="comics_fourth" id="comics_fourth__anchor">
+      <div class="comics_fourth__text">
+         <p class="comics_main-text">He fled from his past.</p>
+         <a href="#" class="get-more_btn">More about István</a>
+      </div>
+
+      <div class="comics_img__wrapper">
+         <img src="./images/dist/comics-fourth.jpg" alt="">
+      </div>
    </div>
 </div>
 
-<div class="comics_second">
-   <div class="comics_second__text">
-      <p class="comics_main-text">He didn’t want to help the Nazis.</p>
-   </div>
-</div>
 
-<div class="comics_third">
-   <div class="comics_third__text">
-      <p class="comics_main-text">Lost youth: She was arrested at 16.</p>
-      <a href="#" class="get-more_btn">More about Helena</a>
-   </div>
-</div>
-
-<div class="comics_fourth">
-   <div class="comics_fourth__text">
-      <p class="comics_main-text">He fled from his past.</p>
-      <a href="#" class="get-more_btn">More about István</a>
-   </div>
-</div>
 
 <div class="people_gallery container">
    <h2>Window onto history</h2>
@@ -345,7 +369,11 @@
    </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+   integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+   crossorigin="anonymous"></script>
 <script src="js/app.min.js"></script>
+
 
 </body>
 

@@ -1,3 +1,8 @@
+// Import jQuery module (npm i jquery)
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
+
 // import Swiper JS
 import Swiper from 'swiper';
 
@@ -33,5 +38,14 @@ const swiper = new Swiper('.people_gallery__slider', {
       el: '.swiper-pagination',
       clickable: true,
    }
- });
  
+});
+
+// SLOW ANCHOR BUTTON to-down
+var $page = $('html, body');
+ $('a[href*="#"]').click(function() {
+     $page.animate({
+         scrollTop: $($.attr(this, 'href')).offset().top
+     }, 800);
+     return false;
+});
