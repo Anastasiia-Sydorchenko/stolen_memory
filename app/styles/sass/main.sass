@@ -7,129 +7,60 @@
 
    .comics_first
       height: 100vh
+      position: relative
+
       display: flex
       flex-direction: column
       align-items: center
       justify-content: center
-      position: relative
 
       .comics_first__text
          font-family: 'New Tegomin', serif
          width: 50%
-         height: auto
          background-color: white
          padding: 50px
          text-indent: 30px
 
          .comics_top-text
             font-size: calc(15px + 15 * ((100vw - 320px) / (1440 - 320)))
-            line-height: 1.5
 
    .comics_second
-      height: 100vh
-      position: relative
-      margin-bottom: 100px
-      display: flex
-      justify-content: center
-
-      .comics_second__text
-         font-family: 'New Tegomin', serif
-         width: 28%
-         height: 20%
-         padding: 50px
-         background-color: #ffffff
-         position: absolute
-         right: 10%
-         top: 10%
-         z-index: 1
+      @include comics_block
 
       .comics_img__wrapper
-         width: 80%
-         height: 100%
-         margin: 0 auto
-         position: relative
-
-         img 
-            width: 100%
-            height: auto
-            position: absolute
-            top: 50%
-            transform: translate(0, -50%) 
+         .comics_second__text
+            right: -10%
 
    .comics_third
-      height: 100vh
-      position: relative
-      margin-bottom: 100px
-      display: flex
-      justify-content: center
-
-      .comics_third__text
-         font-family: 'New Tegomin', serif
-         width: 28%
-         height: 20%
-         padding: 50px
-         background-color: #ffffff
-         position: absolute
-         left: 10%
-
-         display: flex
-         flex-direction: column
-         justify-content: space-around
-
-         z-index: 1
+      @include comics_block
 
       .comics_img__wrapper
-         width: 80%
-         height: 100%
-         margin: 0 auto
-         position: relative
+         .comics_third__text
+            left: -10%
 
-         img 
-            width: 100%
-            height: auto
-            position: absolute
-            top: 50%
-            transform: translate(0, -50%) 
+.comics_fourth
+   background-image: url('../images/dist/main_bg.jpg')
+   background-repeat: no-repeat
+   background-size: 100% 65%
+   @include comics_block
 
-   .comics_fourth
-      height: 45vh
-      padding-top: 20vh
-      position: relative
-
+   .comics_img__wrapper
       .comics_fourth__text
-         font-family: 'New Tegomin', serif
-         width: 28%
-         height: 20%
-         padding: 50px
-         background-color: #ffffff
-         position: absolute
-         right: 10%
-         top: 0
+         right: -10%
 
-         display: flex
-         flex-direction: column
-         justify-content: space-around
+      img
+         -webkit-box-shadow: -10px 10px 18px 1px rgba(0, 0, 0, 0.2)
+         -moz-box-shadow: -10px 10px 18px 1px rgba(0, 0, 0, 0.2)
+         box-shadow: -10px 10px 18px 1px rgba(0, 0, 0, 0.2)
 
-         z-index: 1
+   .to-down
+      color: black
 
-      .comics_img__wrapper
-         width: 80%
-         height: 100%
-         margin: 0 auto
-         position: relative
-
-         img 
-            width: 100%
-            height: auto
-            position: absolute
-            top: 50%
-            transform: translate(0, -50%) 
-            -webkit-box-shadow: -10px 10px 18px 1px rgba(0, 0, 0, 0.2)
-            -moz-box-shadow: -10px 10px 18px 1px rgba(0, 0, 0, 0.2)
-            box-shadow: -10px 10px 18px 1px rgba(0, 0, 0, 0.2)
+      &:hover
+         color: #83caba
 
 .people_gallery
-   padding: 150px 0 100px 0
+   padding: 50px 0 150px 0
 
    .people_gallery__slider
       padding-bottom: 50px
@@ -422,42 +353,69 @@ footer
             height: auto
 
 //MEDIA QUERIES  
-//@media (max-width: 1800px)
+@media (min-width: 1800px)
+   .comics_text_block
+      width: 500px
+      height: 200px
 
 @media (max-width: 1399.98px)
-   .comics_second .comics_second__text,
-   .comics_third .comics_third__text,
-   .comics_fourth .comics_fourth__text
-      width: 25%
-      height: 15%
+   .comics_text_block
+      width: 35%
+      height: 25%
       padding: 35px
 
 //@media (max-width: 1199.98px)
 
 @media (max-width: 991.98px)
-   .comics .comics_first
-      padding-bottom: 0
-
-      .comics_img__wrapper
-         display: none
-      
-      .comics_first__text
-         background-color: white
-         padding: 50px
-
    .our-exhibitions_inner
       .news
          .news-item
             height: 420px
 
 @media (max-width: 767.98px)
-   .comics_first
-      .comics_first__text
-         width: 80%
+   .comics 
+      .comics_first .comics_first__text
+         width: 70%
+         padding: 35px
 
-      .comics_top-text
-         font-size: 25px
-         line-height: 1.8
+         .comics_top-text
+            font-size: calc(20px + 5 * ((100vw - 320px) / (767 - 320)))
+
+      .comics_second
+         .comics_img__wrapper
+            .comics_second__text
+               right: 0
+
+      .comics_third
+         .comics_img__wrapper
+            .comics_third__text
+               left: 0
+               top: -45%
+
+   .comics_fourth 
+      .comics_img__wrapper 
+         .comics_fourth__text
+            right: 0
+
+   .comics_img__wrapper 
+      width: 90%
+
+      .comics_text_block 
+         top: -40%
+         height: auto
+         width: 80%
+         font-size: 30px
+
+         .comics_main-text
+            font-size: calc(20px + 10 * ((100vw - 320px) / (767 - 320)))
+
+         .get-more_btn
+            padding-bottom: 5px
+            font-size: calc(15px + 5 * ((100vw - 320px) / (767 - 320)))
+
+
+   .comics_text_block
+      padding: 20px
 
    .our-exhibitions_inner
       .news
@@ -484,6 +442,20 @@ footer
                   bottom: 10px
 
 @media (max-width: 575.98px)
+   .comics 
+      .comics_first .comics_first__text
+         width: 60%
+
+      .comics_third
+         .comics_img__wrapper
+            .comics_third__text
+               left: 0
+               top: -65%
+
+   .comics_img__wrapper 
+      .comics_text_block 
+         top: -65%
+
    .our-exhibitions_inner
       .news
          .news-item

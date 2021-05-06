@@ -5,6 +5,19 @@
 // font-family: 'New Tegomin', serif
 // font-family: 'Inconsolata', monospace
 
+// MIXINS
+@mixin transition
+   -webkit-transition: all 0.35s ease
+   transition: all 0.35s ease
+
+@mixin comics_block
+   height: 100vh
+   display: flex
+   justify-content: center
+   align-items: center
+   position: relative
+   
+
 body
    font-family: 'Inconsolata', monospace
    font-weight: 400
@@ -21,25 +34,59 @@ h3,
 h4
    padding: 0
    margin: 0
+// HEADERS 
+h2,
+h3
+   font-size: calc(20px + 10 * ((100vw - 320px) / (1440 - 320)))
+   font-family: 'Inconsolata', monospace
 
-.comics_main-text,
-.comics_top-text
+h3 
+   padding: 30px 0
+
+   
+// COMICS SECTION 
+.comics_top-text,
+.comics_main-text
    font-size: calc(15px + 15 * ((100vw - 320px) / (1440 - 320)))
-   line-height: 1.2
+   line-height: 1.5
+   margin-bottom: 15px
+
+.comics_text_block
+   font-family: 'New Tegomin', serif
+   width: 400px
+   height: 150px
+   padding: 50px
+   background-color: #ffffff
+   position: absolute
+   z-index: 1
 
 .comics_main-text
    &:hover
       background-color: rgb(131, 202, 186)
-      transition: .5s linear
       color: #ffffff
       width: fit-content
+      @include transition
 
+.comics_img__wrapper
+   width: 70%
+   position: relative
+
+   .comics_text_block
+      position: absolute
+      top: -10%
+   
+   img 
+      width: 100%
+      height: auto
+
+
+// BUTTONS 
 .get-more_btn
    font-family: 'Inconsolata', monospace
    color: #221D26
    text-decoration: none
    font-size: calc(10px + 10 * ((100vw - 320px) / (1440 - 320)))
-   padding-bottom: 10px
+   padding: 15px 0
    position: relative
    width: fit-content
 
@@ -53,12 +100,12 @@ h4
       right: 0
       margin: 0 auto
       width: 0
-      transition: 0.3s
+      @include transition
 
    &:hover,
    &:focus
       color: #6fb6a6
-      transition: .3s
+      @include transition
 
    &:hover:before
       width: 100%
@@ -70,36 +117,18 @@ h4
       transition: none
 
 .to-down
-         color: white
-         font-size: 35px
-         background-color: transparent
-         border: none
-         position: absolute
-         bottom: 10px
-         text-align: center
+   color: white
+   font-size: calc(20px + 15 * ((100vw - 320px) / (1440 - 320)))
+   background-color: transparent
+   border: none
+   position: absolute
+   bottom: 20px
+   text-align: center
 
-         &:hover
-            color: #83caba
-            font-size: 45px
-            transition: .3s
-
-h2,
-h3
-   font-size: calc(20px + 10 * ((100vw - 320px) / (1440 - 320)))
-   font-family: 'Inconsolata', monospace
-
-h3 
-   padding: 30px 0
-
-.h3_subheading-text
-   font-size: calc(15px + 3 * ((100vw - 320px) / (1440 - 320)))
-   padding-bottom: 30px
-   line-height: 1.5
-
-.subheading_text
-   font-size: calc(15px + 5 * ((100vw - 320px) / (1440 - 320)))
-   line-height: 1.8
-   padding: 35px 0 50px 0
+   &:hover
+      color: #83caba
+      font-size: calc(35px + 10 * ((100vw - 320px) / (1440 - 320)))
+      @include transition
 
 .main-btn
    font-size: calc(15px + 9 * ((100vw - 320px) / (1440 - 320)))
@@ -114,5 +143,17 @@ h3
       background-color: #6fb6a6
       border-color: #6fb6a6
       color: white
-      transition: .3s
+       @include transition
+       
+.h3_subheading-text
+   font-size: calc(15px + 3 * ((100vw - 320px) / (1440 - 320)))
+   padding-bottom: 30px
+   line-height: 1.5
+
+.subheading_text
+   font-size: calc(15px + 5 * ((100vw - 320px) / (1440 - 320)))
+   line-height: 1.8
+   padding: 35px 0 50px 0
+
+
       
