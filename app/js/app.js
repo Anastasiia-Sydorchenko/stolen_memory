@@ -12,7 +12,7 @@ import SwiperCore, { Navigation, Pagination, Mousewheel } from 'swiper/core';
 // configure Swiper to use modules
 SwiperCore.use([Navigation, Pagination, Mousewheel]);
 
-const swiper = new Swiper('.people_gallery__slider', {
+const swiperPeople = new Swiper('.people_gallery__slider', {
    // Optional parameters
    direction: 'horizontal',
    loop: true,
@@ -43,7 +43,27 @@ const swiper = new Swiper('.people_gallery__slider', {
       el: '.swiper-pagination',
       clickable: true,
    }
- 
+});
+
+const swiperItems = new Swiper('.objects-gallery__mobile', {
+   // Optional parameters
+   direction: 'horizontal',
+   loop: true,
+   slidesPerView: 1,
+   spaceBetween: 20,
+   lazyLoading: true,
+   
+   breakpoints: {
+      575: {
+         slidesPerView: 2,
+         spaceBetween: 35
+      },
+   },
+
+   pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+   }
 });
 
 // SLOW ANCHOR BUTTON to-down
