@@ -12,12 +12,12 @@
 
 @mixin comics_block
    height: 100vh
+   height: calc(var(--vh, 1vh) * 100)
    display: flex
    justify-content: center
    align-items: center
    position: relative
    
-
 body
    font-family: 'Inconsolata', monospace
    font-weight: 400
@@ -30,6 +30,7 @@ body
    margin-right: auto
 
 p,
+h2,
 h3,
 h4
    padding: 0
@@ -37,7 +38,7 @@ h4
 // HEADERS 
 h2,
 h3
-   font-size: calc(20px + 10 * ((100vw - 320px) / (1440 - 320)))
+   font-size: calc(25px + 10 * ((100vw - 320px) / (1440 - 320)))
    font-family: 'Inconsolata', monospace
 
 h3 
@@ -149,14 +150,14 @@ h3
        @include transition
        
 .h3_subheading-text
-   font-size: calc(15px + 3 * ((100vw - 320px) / (1440 - 320)))
+   font-size: calc(18px + 3 * ((100vw - 320px) / (1440 - 320)))
    padding-bottom: 30px
    line-height: 1.5
 
 .subheading_text
-   font-size: calc(15px + 5 * ((100vw - 320px) / (1440 - 320)))
+   font-size: calc(18px + 5 * ((100vw - 320px) / (1440 - 320)))
    line-height: 1.8
-   padding: 35px 0 50px 0
+   padding: 50px 0
 
 
       

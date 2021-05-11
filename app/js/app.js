@@ -16,13 +16,18 @@ const swiper = new Swiper('.people_gallery__slider', {
    // Optional parameters
    direction: 'horizontal',
    loop: true,
-   slidesPerView: 2,
+   slidesPerView: 1,
    spaceBetween: 20,
    lazyLoading: true,
    mousewheel: {
       invert: true,
    },
-   breakpoints: {   
+   breakpoints: {
+      768: {
+         slidesPerView: 2,
+         spaceBetween: 35
+      },
+
       991: {
          slidesPerView: 3,
          spaceBetween: 35
