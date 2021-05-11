@@ -367,12 +367,16 @@ footer
 //@media (max-width: 1199.98px)
 
 @media (max-width: 991.98px)
+   .comics_img__wrapper .comics_text_block
+      height: auto
+      top: -30%
+
    .our-exhibitions_inner
       .news
          .news-item
             height: 420px
 
-@media (max-width: 767.98px)
+@media (max-width: 768px)
    .comics 
       .comics_first .comics_first__text
          width: 70%
@@ -382,29 +386,59 @@ footer
             font-size: calc(20px + 5 * ((100vw - 320px) / (767 - 320)))
 
       .comics_second
+         position: relative
+
          .comics_img__wrapper
+            position: initial
+
+            .desctop
+               display: none
+
+            .mobile
+               display: block
+
             .comics_second__text
                right: 0
 
       .comics_third
+         position: relative
+
          .comics_img__wrapper
+            position: initial
+
+            .desctop
+               display: none
+
+            .mobile
+               display: block
+
             .comics_third__text
                left: 0
-               top: -45%
 
    .comics_fourth 
+      position: relative
+
       .comics_img__wrapper 
+         position: initial
+
+         .desctop
+            display: none
+
+         .mobile
+            display: block
+
          .comics_fourth__text
             right: 0
 
    .comics_img__wrapper 
-      width: 90%
+      width: 80%
 
       .comics_text_block 
-         top: -40%
          height: auto
+         padding: 20px
          width: 80%
          font-size: 30px
+         top: 5%
 
          .comics_main-text
             font-size: calc(20px + 10 * ((100vw - 320px) / (767 - 320)))
@@ -412,10 +446,6 @@ footer
          .get-more_btn
             padding-bottom: 5px
             font-size: calc(15px + 5 * ((100vw - 320px) / (767 - 320)))
-
-
-   .comics_text_block
-      padding: 20px
 
    .our-exhibitions_inner
       .news
@@ -444,17 +474,13 @@ footer
 @media (max-width: 575.98px)
    .comics 
       .comics_first .comics_first__text
-         width: 60%
+         width: 80%
+         padding: 20px
 
       .comics_third
          .comics_img__wrapper
             .comics_third__text
                left: 0
-               top: -65%
-
-   .comics_img__wrapper 
-      .comics_text_block 
-         top: -65%
 
    .our-exhibitions_inner
       .news
@@ -466,6 +492,8 @@ footer
                width: 100%
                height: 120px
 
-//@media (max-width: 479.98px)
+@media (max-width: 479.98px)
+   .comics_img__wrapper
+      width: 95%
 
 //@media (max-width: 374.98px)
