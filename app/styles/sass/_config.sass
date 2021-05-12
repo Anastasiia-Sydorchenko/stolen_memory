@@ -5,6 +5,12 @@
 // font-family: 'New Tegomin', serif
 // font-family: 'Inconsolata', monospace
 
+//====== COLORS =============================================
+$main-color_black: #221D26
+$main-color_white: #ffffff
+$main-color_turquoise: #6fb6a6
+$footer-color_dark-blue: #000fa0
+
 // MIXINS
 @mixin transition
    -webkit-transition: all 0.35s ease
@@ -18,116 +24,21 @@
    justify-content: center
    align-items: center
    position: relative
-   
+
+@mixin center-position
+   margin-left: auto
+   margin-right: auto
+
+//====== COMMON STYLES =======================================
 body
    font-family: 'Inconsolata', monospace
    font-weight: 400
    font-style: normal
-   color: #221D26
+   color: $main-color_black
 
 .container
    width: 85%
-   margin-left: auto
-   margin-right: auto
-
-p,
-h2,
-h3,
-h4
-   padding: 0
-   margin: 0
-// HEADERS 
-h2,
-h3
-   font-size: calc(25px + 10 * ((100vw - 320px) / (1440 - 320)))
-   font-family: 'Inconsolata', monospace
-
-h3 
-   //padding: 30px 0
-
-// COMICS SECTION 
-.comics_top-text,
-.comics_main-text
-   font-size: calc(15px + 15 * ((100vw - 320px) / (1440 - 320)))
-   line-height: 1.5
-   margin-bottom: 15px
-
-.comics_text_block
-   font-family: 'New Tegomin', serif
-   width: 400px
-   height: 150px
-   padding: 50px
-   background-color: #ffffff
-   position: absolute
-   z-index: 1
-
-.comics_main-text
-   &:hover
-      background-color: rgb(131, 202, 186)
-      color: #ffffff
-      width: fit-content
-      @include transition
-
-.comics_img__wrapper
-   width: 70%
-   position: relative
-
-   .comics_text_block
-      position: absolute
-      top: -10%
-   
-   .desctop,
-   .mobile 
-      width: 100%
-      height: auto
-
-   .mobile
-      display: none
-
-// BUTTONS 
-.get-more_btn
-   font-family: 'Inconsolata', monospace
-   color: #221D26
-   font-size: calc(13px + 10 * ((100vw - 320px) / (1440 - 320)))
-   position: relative
-   width: fit-content
-   text-decoration: underline transparent
-   transition: text-decoration 0.35s
-
-   &:hover,
-   &:focus
-      text-decoration: underline #6fb6a6
-      color: #6fb6a6
-      @include transition 
-
-.to-down
-   color: white
-   font-size: calc(20px + 15 * ((100vw - 320px) / (1440 - 320)))
-   background-color: transparent
-   border: none
-   position: absolute
-   bottom: 20px
-   text-align: center
-
-   &:hover
-      color: #83caba
-      font-size: calc(35px + 10 * ((100vw - 320px) / (1440 - 320)))
-      @include transition
-
-.main-btn
-   font-size: calc(15px + 9 * ((100vw - 320px) / (1440 - 320)))
-   border: 1px solid black
-   padding: 20px
-   text-decoration: none
-   color: black
-   //width: fit-content
-
-   &:hover,
-   &:focus
-      background-color: #6fb6a6
-      border-color: #6fb6a6
-      color: white
-      @include transition
+   @include center-position
 
 .h3_subheading-text
    font-size: calc(18px + 3 * ((100vw - 320px) / (1440 - 320)))
@@ -139,79 +50,70 @@ h3
    line-height: 1.8
    padding: 50px 0
 
-//SWIPER & grid 
-.swiper-slide,
-.grid-item
-   background-image: url('../images/dist/people_gallery__bg.jpg')
-   background-repeat: no-repeat
-   background-position: bottom
-   padding-bottom: 30px
-   height: auto
+// ====== HEADERS ============================================= 
+p, h2, h3, h4
+   padding: 0
+   margin: 0
 
-   .img-wrapper
-      display: flex
-      justify-content: center
+h2, h3
+   font-size: calc(25px + 10 * ((100vw - 320px) / (1440 - 320)))
+   font-family: 'Inconsolata', monospace
 
-      img
-         width: 100%
-         height: auto
-
-   .name,
-   .description
-      font-size: calc(13px + 7 * ((100vw - 320px) / (1440 - 320)))
-      color: #ffffff
-      text-align: center
-      line-height: 1.5
-      padding: 0 10px
-
-   .name
-      padding: 20px 0
-      
-.swiper-pagination-bullet
-   width: 10px
-   height: 10px
-
-.swiper-pagination-bullet-active
-   background-color: #6fb6a6
-
-
-//COMMON STYLES FOR ABOUT-US SECTION
-.about-us_content,
-.how-to-help_content
-   margin-left: auto
-
-.online-archive_content
-   margin-top: 100px
-   margin-bottom: 100px
-   
-.about-us_content,
-.online-archive_content,
-.how-to-help_content
-   background-color: white
+// ====== BUTTONS ============================================= 
+.get-more_btn,
+.get-more_btn__comics
+   font-family: 'Inconsolata', monospace
+   font-size: calc(13px + 10 * ((100vw - 320px) / (1440 - 320)))
    position: relative
-   height: 450px
+   width: fit-conten
 
-   .info
-      display: flex
-      flex-direction: column
-      width: 35%
-      padding: 50px
+.get-more_btn__comics
+   color: $main-color_black
+   text-decoration: underline transparent
+   transition: text-decoration 0.35s
 
-      h3 
-         padding-bottom: 20px
+   &:hover,
+   &:focus
+      text-decoration: underline $main-color_turquoise
+      color: $main-color_turquoise
+      @include transition 
 
-      .how-to-help_img,
-      .about-us_content_img,
-      .online-archive_img
-         position: absolute
-         top: 23px
-         left: -40px
-         width: 45%
+.get-more_btn
+   color: $main-color_turquoise
+   text-decoration: none
 
-         img
-            width: 100%
-            height: auto
+   &:hover,
+   &:focus
+      color: $main-color_white
+      background-color: $main-color_turquoise
+      @include transition 
 
+.to-down
+   color: $main-color_white
+   font-size: calc(20px + 15 * ((100vw - 320px) / (1440 - 320)))
+   background-color: transparent
+   border: none
+   position: absolute
+   bottom: 20px
+   text-align: center
 
+   &:hover
+      color: $main-color_turquoise
+      font-size: calc(35px + 10 * ((100vw - 320px) / (1440 - 320)))
+      @include transition
+
+.main-btn
+   font-size: calc(15px + 9 * ((100vw - 320px) / (1440 - 320)))
+   border: 1px solid $main-color_black
+   padding: 20px
+   text-decoration: none
+   color: $main-color_black
+
+   &:hover,
+   &:focus
+      background-color: $main-color_turquoise
+      border-color: $main-color_turquoise
+      color: $main-color_white
+      @include transition
 
 
