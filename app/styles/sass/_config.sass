@@ -45,7 +45,6 @@ h3
 h3 
    //padding: 30px 0
 
-   
 // COMICS SECTION 
 .comics_top-text,
 .comics_main-text
@@ -89,37 +88,17 @@ h3
 .get-more_btn
    font-family: 'Inconsolata', monospace
    color: #221D26
-   text-decoration: none
    font-size: calc(13px + 10 * ((100vw - 320px) / (1440 - 320)))
-   padding-bootom: 10px
    position: relative
    width: fit-content
-
-   &:before
-      content: ''
-      border-bottom: 1px solid #6fb6a6
-      padding: 0 30px
-      position: absolute
-      bottom: 0
-      left: 0
-      right: 0
-      margin: 0 auto
-      width: 0
-      @include transition
+   text-decoration: underline transparent
+   transition: text-decoration 0.35s
 
    &:hover,
    &:focus
+      text-decoration: underline #6fb6a6
       color: #6fb6a6
-      @include transition
-
-   &:hover:before
-      width: 100%
-      padding: 0
-
-   &:active
-      background: #6fb6a6
-      color: #ffffff
-      transition: none
+      @include transition 
 
 .to-down
    color: white
@@ -148,8 +127,8 @@ h3
       background-color: #6fb6a6
       border-color: #6fb6a6
       color: white
-       @include transition
-       
+      @include transition
+
 .h3_subheading-text
    font-size: calc(18px + 3 * ((100vw - 320px) / (1440 - 320)))
    padding-bottom: 30px

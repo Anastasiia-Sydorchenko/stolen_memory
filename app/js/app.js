@@ -19,22 +19,26 @@ const swiperPeople = new Swiper('.people_gallery__slider', {
    slidesPerView: 1,
    spaceBetween: 20,
    lazyLoading: true,
+   speed: 1000,
    mousewheel: {
       invert: true,
    },
    breakpoints: {
       768: {
          slidesPerView: 2,
+         slidesPerGroup: 2,
          spaceBetween: 35
       },
 
       991: {
          slidesPerView: 3,
+         slidesPerGroup: 3,
          spaceBetween: 35
       },
 
       1599: {
          slidesPerView: 4,
+         slidesPerGroup: 4,
          spaceBetween: 35
       },
    },
@@ -52,10 +56,12 @@ const swiperItems = new Swiper('.objects-gallery__mobile', {
    slidesPerView: 1,
    spaceBetween: 20,
    lazyLoading: true,
+   speed: 1000,
    
    breakpoints: {
       575: {
          slidesPerView: 2,
+      slidesPerGroup: 2,
          spaceBetween: 35
       },
    },
