@@ -89,7 +89,8 @@
    .to-down
       color: $main-color_black
 
-      &:hover
+      &:hover,
+      &:focus
          color: $main-color_turquoise
 
 // ====== PEOPLE GALLERY SECTION =============================================
@@ -371,10 +372,20 @@ footer
    justify-content: space-between
    flex-wrap: wrap
 
-   span
+   span, a
       display: block
-      margin-bottom: 20px
       line-height: 1.5
+
+   span
+      margin-bottom: 20px
+   
+   a
+      text-decoration: none
+      color: $footer-color_dark-blue
+
+      &:hover,
+      &:focus
+         text-decoration: underline
 
    .block_1
       width: 30%
@@ -387,20 +398,21 @@ footer
          display: flex
 
          input
-            height: 25px
-            width: 70%
-            outline: none
-            padding: 0 5px
+            border: 1px solid $footer-color_dark-blue
+            padding: 7px 10px
+            width: 60%
+
+            &:focus
+               outline: none
 
          button
-            height: 29px
-            width: 20%
-            margin: 0
             background-color: $footer-color_dark-blue
             color: $main-color_white
             border: 1px solid $footer-color_dark-blue
+            width: 20%
 
-            &:hover
+            &:hover,
+            &:focus
                background-color: $main-color_white
                color: $footer-color_dark-blue
                @include transition
@@ -414,10 +426,11 @@ footer
             font-size: 20px
             color: $main-color_black
 
-            &:hover
+            &:hover,
+            &:focus
                color: $footer-color_dark-blue
                @include transition
-
+                  
    .block_3
       width: 30%
 
@@ -556,6 +569,10 @@ footer
 
    .people_gallery
       margin-bottom: 80px
+      .people_gallery__slider 
+         .swiper-wrapper .swiper-slide 
+            .img-wrapper img 
+               width: 75%
 
    .about_objects
       margin-bottom: 200px
@@ -599,9 +616,8 @@ footer
 
          .info
             width: 80%
-            margin-left: auto
-            margin-right: auto
             padding: 25px
+            @include center-position
 
    footer
       padding: 50px 0 20px 
@@ -613,10 +629,9 @@ footer
       .block_3
          display: flex
          width: 100%
-         margin-left: auto
-         margin-right: auto
          margin-top: 20px
          justify-content: space-between
+         @include center-position
 
          span
             display: none
@@ -645,8 +660,7 @@ footer
 
          .effects_info
             position: initial
-            margin-left: auto
-            margin-right: auto
+            @include center-position
 
    .our-exhibitions_inner
       .news
